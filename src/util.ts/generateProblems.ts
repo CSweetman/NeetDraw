@@ -5,16 +5,8 @@ const getProblems = (difficulty: DifficultyLevel): leetProblem[] => {
     let problems = leetProblems.filter(
         (p) => p.difficulty.toLocaleLowerCase() === difficulty
     );
-    // if (!isPremium) {
-    //     problems = problems.filter((p) => !p.isPremium);
-    // }
-    return problems;
-};
 
-const sortMap = {
-    easy: 0,
-    medium: 1,
-    hard: 2
+    return problems;
 };
 
 const getRandomSet = (problemList: leetProblem[], amt: number) => {
