@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
-import { DIFFICULTY_LEVEL, DifficultyLevel, leetProblem } from './types';
+import { leetProblem } from './types';
 import { getTodaysProblems } from './util.ts/generateProblems';
 import Problem from './components/Problem';
 

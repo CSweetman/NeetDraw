@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { DIFFICULTY_LEVEL, leetProblem } from '../types';
 
 const Problem = (props: { problem: leetProblem; toggleProblem: boolean }) => {
-    const [solved, setSolved] = useState(false);
 
     const getDiffColor = () => {
         const diff = props.problem.difficulty.toLowerCase();
@@ -30,9 +28,6 @@ const Problem = (props: { problem: leetProblem; toggleProblem: boolean }) => {
                     name="isSolved"
                     id="isSolved"
                     className=" h-[1.5rem] w-[1.5rem] align-middle hover:cursor-pointer"
-                    onChange={() => {
-                        setSolved((prev) => !prev);
-                    }}
                     onClick={(e) => {
                         e.stopPropagation();
                     }}
