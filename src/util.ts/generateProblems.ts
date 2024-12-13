@@ -2,7 +2,7 @@ import { DIFFICULTY_LEVEL, DifficultyLevel, leetProblem } from '../types';
 import leetProblems from '../data/neetCode150Problems.json';
 
 const getProblems = (difficulty: DifficultyLevel): leetProblem[] => {
-    let problems = leetProblems.filter(
+    const problems = leetProblems.filter(
         (p) => p.difficulty.toLocaleLowerCase() === difficulty
     );
 

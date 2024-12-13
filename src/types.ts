@@ -13,6 +13,6 @@ export type leetProblem = {
     href: string,
     text: string,
     difficulty: string,
-    isPremium: boolean
+    isPremium: boolean,
 }
 
