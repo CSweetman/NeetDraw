@@ -18,9 +18,10 @@ const Problem = (props: {
         else return 'bg-[#9e403d]';
     };
 
-    // useEffect(() => {
-
-    // }, [])
+    const openInNewTab = (url: string) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWindow) newWindow.opener = null;
+    };
 
     return (
         // <tr
@@ -32,6 +33,7 @@ const Problem = (props: {
 
         <div
             className={`flex min-h-[50px] w-[100%] items-center  gap-4 rounded-md pl-4  hover:cursor-pointer ${getDiffColor()} `}
+            onClick={() => openInNewTab(props.problem.href)}
         >
             <Checkbox
                 // type="checkbox"
